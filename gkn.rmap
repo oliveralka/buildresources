@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rm:rmap xmlns:bc="http://www.eclipse.org/buckminster/Common-1.0" xmlns:rm="http://www.eclipse.org/buckminster/RMap-1.0">
+  <rm:locator pattern="^com\.genericworkflownodes\..+" searchPathRef="n4k-genericworkflownodes"/>
+  <rm:locator pattern="^de\.openms(?:\..+)?" searchPathRef="n4k-openms"/>
+  <rm:locator pattern="^de\.seqan(?:\..+)?" searchPathRef="n4k-seqan"/>
+  <rm:searchPath name="n4k-genericworkflownodes">
+    <rm:provider componentTypes="buckminster,osgi.bundle,eclipse.feature" readerType="local" mutable="false">
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="file:///{0}/GenericKnimeNodes/{1}/">
+        <bc:propertyRef key="workspace.root"/>
+        <bc:propertyRef key="buckminster.component"/>
+      </rm:uri>
+    </rm:provider>
+  </rm:searchPath>
+  <rm:searchPath name="n4k-openms">
+    <rm:provider componentTypes="buckminster,osgi.bundle,eclipse.feature" readerType="local" mutable="false">
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="file:///{0}/de.openms/{1}/">
+        <bc:propertyRef key="workspace.root"/>
+        <bc:propertyRef key="buckminster.component"/>
+      </rm:uri>
+    </rm:provider>
+  </rm:searchPath>
+  <rm:searchPath name="n4k-seqan">
+    <rm:provider componentTypes="buckminster,osgi.bundle,eclipse.feature" readerType="local" mutable="false">
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="file:///{0}/external/de.seqan/{1}/">
+        <bc:propertyRef key="workspace.root"/>
+        <bc:propertyRef key="buckminster.component"/>
+      </rm:uri>
+    </rm:provider>
+    <rm:provider componentTypes="buckminster,osgi.bundle,eclipse.feature" readerType="local" mutable="false">
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="file:///{0}/nodes4knime/de.seqan/{1}/">
+        <bc:propertyRef key="workspace.root"/>
+        <bc:propertyRef key="buckminster.component"/>
+      </rm:uri>
+    </rm:provider>
+    <rm:provider componentTypes="buckminster,osgi.bundle,eclipse.feature" readerType="local" mutable="false">
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="file:///{0}/egit/seqan/{1}/">
+        <bc:propertyRef key="workspace.root"/>
+        <bc:propertyRef key="buckminster.component"/>
+      </rm:uri>
+    </rm:provider>
+  </rm:searchPath>
+</rm:rmap>
