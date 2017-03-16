@@ -57,31 +57,7 @@
       <rm:property key="buckminster.mutable" value="false"/>
       <rm:uri format="{0}">
         <bc:replace>
-          <bc:propertyRef key="knime.repos.0"/>
-          <bc:match pattern="\s" replacement="%20"/>
-          <bc:match pattern="(" quotePattern="true" replacement="%28"/>
-          <bc:match pattern=")" quotePattern="true" replacement="%29"/>
-        </bc:replace>
-      </rm:uri>
-    </rm:provider>
-    <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
-      <rm:property key="buckminster.source" value="false"/>
-      <rm:property key="buckminster.mutable" value="false"/>
-      <rm:uri format="{0}">
-        <bc:replace>
           <bc:propertyRef key="knime.repos.1"/>
-          <bc:match pattern="\s" replacement="%20"/>
-          <bc:match pattern="(" quotePattern="true" replacement="%28"/>
-          <bc:match pattern=")" quotePattern="true" replacement="%29"/>
-        </bc:replace>
-      </rm:uri>
-    </rm:provider>
-    <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
-      <rm:property key="buckminster.source" value="false"/>
-      <rm:property key="buckminster.mutable" value="false"/>
-      <rm:uri format="{0}">
-        <bc:replace>
-          <bc:propertyRef key="knime.repos.2"/>
           <bc:match pattern="\s" replacement="%20"/>
           <bc:match pattern="(" quotePattern="true" replacement="%28"/>
           <bc:match pattern=")" quotePattern="true" replacement="%29"/>
