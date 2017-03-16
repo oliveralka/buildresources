@@ -3,6 +3,7 @@
   <rm:locator pattern="^com\.genericworkflownodes\..+" searchPathRef="n4k-genericworkflownodes"/>
   <rm:locator pattern="^de\.openms(?:\..+)?" searchPathRef="n4k-openms"/>
   <rm:locator pattern="^de\.seqan(?:\..+)?" searchPathRef="n4k-seqan"/>
+  <rm:locator pattern=".+" searchPathRef="knime-prebuilt-repository" failOnError="false"/>
   <rm:locator searchPathRef="knime-stuff"/>
   <rm:searchPath name="n4k-genericworkflownodes">
     <rm:provider componentTypes="buckminster,osgi.bundle,eclipse.feature" readerType="local" mutable="false">
@@ -48,6 +49,44 @@
   <rm:searchPath name="knime-stuff">
     <rm:provider componentTypes="eclipse.feature,osgi.bundle,buckminster" readerType="p2" source="false" mutable="false">
       <rm:uri format="http://update.knime.org/analytics-platform/3.3"/>
+    </rm:provider>
+  </rm:searchPath>
+   <rm:searchPath name="knime-prebuilt-repository">
+    <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
+      <rm:property key="buckminster.source" value="false"/>
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="{0}">
+        <bc:replace>
+          <bc:propertyRef key="knime.repos.0"/>
+          <bc:match pattern="\s" replacement="%20"/>
+          <bc:match pattern="(" quotePattern="true" replacement="%28"/>
+          <bc:match pattern=")" quotePattern="true" replacement="%29"/>
+        </bc:replace>
+      </rm:uri>
+    </rm:provider>
+    <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
+      <rm:property key="buckminster.source" value="false"/>
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="{0}">
+        <bc:replace>
+          <bc:propertyRef key="knime.repos.1"/>
+          <bc:match pattern="\s" replacement="%20"/>
+          <bc:match pattern="(" quotePattern="true" replacement="%28"/>
+          <bc:match pattern=")" quotePattern="true" replacement="%29"/>
+        </bc:replace>
+      </rm:uri>
+    </rm:provider>
+    <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
+      <rm:property key="buckminster.source" value="false"/>
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="{0}">
+        <bc:replace>
+          <bc:propertyRef key="knime.repos.2"/>
+          <bc:match pattern="\s" replacement="%20"/>
+          <bc:match pattern="(" quotePattern="true" replacement="%28"/>
+          <bc:match pattern=")" quotePattern="true" replacement="%29"/>
+        </bc:replace>
+      </rm:uri>
     </rm:provider>
   </rm:searchPath>
 </rm:rmap>
