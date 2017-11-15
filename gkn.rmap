@@ -48,7 +48,9 @@
   </rm:searchPath>
   <rm:searchPath name="knime-stuff">
     <rm:provider componentTypes="eclipse.feature,osgi.bundle,buckminster" readerType="p2" source="false" mutable="false">
-      <rm:uri format="http://update.knime.org/analytics-platform/3.3"/>
+      <rm:uri format="http://update.knime.org/analytics-platform/${knime.version}"/>
+        <bc:propertyRef key="knime.version" />
+      </rm:uri>
     </rm:provider>
   </rm:searchPath>
   <rm:searchPath name="knime-prebuilt-repository">
