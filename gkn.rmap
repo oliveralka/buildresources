@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rm:rmap xmlns:bc="http://www.eclipse.org/buckminster/Common-1.0" xmlns:rm="http://www.eclipse.org/buckminster/RMap-1.0">
   <rm:property key="eclipse.download" value="http://download.eclipse.org"/>
-  <rm:property key="eclipse.target.platform" value="${eclipse.download}/releases/mars"/>
-  <rm:property key="eclipse.updates.target.platform" value="${eclipse.download}/eclipse/updates/4.5"/>
+  <rm:property key="eclipse.target.platform" value="${eclipse.download}/releases/oxygen"/>
+  <rm:property key="eclipse.updates.target.platform" value="${eclipse.download}/eclipse/updates/4.7"/>
   <rm:locator pattern=".+" searchPathRef="knime-prebuilt-repository" failOnError="false"/>
   <rm:locator pattern="^com\.genericworkflownodes\..+" searchPathRef="n4k-genericworkflownodes"/>
   <rm:locator pattern="^de\.openms(?:\..+)?" searchPathRef="n4k-openms"/>
