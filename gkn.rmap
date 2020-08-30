@@ -7,8 +7,9 @@
   <rm:locator pattern="^com\.genericworkflownodes\..+" searchPathRef="n4k-genericworkflownodes"/>
   <rm:locator pattern="^de\.openms(?:\..+)?" searchPathRef="n4k-openms"/>
   <rm:locator pattern="^de\.seqan(?:\..+)?" searchPathRef="n4k-seqan"/>
+  <rm:locator pattern="^org\.eclipse\..+" searchPathRef="eclipse"/>
   <rm:locator searchPathRef="knime-stuff"/>
-  <rm:locator searchPathRef="eclipse"/>
+  
   
   <rm:searchPath name="n4k-genericworkflownodes">
     <rm:provider componentTypes="buckminster,osgi.bundle,eclipse.feature" readerType="local" mutable="false">
