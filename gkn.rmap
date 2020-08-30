@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rm:rmap xmlns:bc="http://www.eclipse.org/buckminster/Common-1.0" xmlns:rm="http://www.eclipse.org/buckminster/RMap-1.0">
+  <rm:property key="eclipse.download" value="http://download.eclipse.org"/>
+  <rm:property key="eclipse.target.platform" value="${eclipse.download}/releases/mars"/>
+  <rm:property key="eclipse.updates.target.platform" value="${eclipse.download}/eclipse/updates/4.5"/>
   <rm:locator pattern=".+" searchPathRef="knime-prebuilt-repository" failOnError="false"/>
   <rm:locator pattern="^com\.genericworkflownodes\..+" searchPathRef="n4k-genericworkflownodes"/>
   <rm:locator pattern="^de\.openms(?:\..+)?" searchPathRef="n4k-openms"/>
   <rm:locator pattern="^de\.seqan(?:\..+)?" searchPathRef="n4k-seqan"/>
   <rm:locator searchPathRef="knime-stuff"/>
+  <rm:locator searchPathRef="eclipse"/>
+  
   <rm:searchPath name="n4k-genericworkflownodes">
     <rm:provider componentTypes="buckminster,osgi.bundle,eclipse.feature" readerType="local" mutable="false">
       <rm:property key="buckminster.mutable" value="false"/>
@@ -64,6 +69,22 @@
           <bc:match pattern="(" quotePattern="true" replacement="%28"/>
           <bc:match pattern=")" quotePattern="true" replacement="%29"/>
         </bc:replace>
+      </rm:uri>
+    </rm:provider>
+  </rm:searchPath>
+  <rm:searchPath name="eclipse">
+    <rm:provider componentTypes="eclipse.feature,osgi.bundle" readerType="p2" source="false" mutable="false">
+      <rm:property key="buckminster.source" value="false"/>
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="{0}">
+        <bc:propertyRef key="eclipse.updates.target.platform"/>
+      </rm:uri>
+    </rm:provider>
+    <rm:provider componentTypes="eclipse.feature,osgi.bundle" readerType="p2" source="false" mutable="false">
+      <rm:property key="buckminster.source" value="false"/>
+      <rm:property key="buckminster.mutable" value="false"/>
+      <rm:uri format="{0}">
+        <bc:propertyRef key="eclipse.target.platform"/>
       </rm:uri>
     </rm:provider>
   </rm:searchPath>
